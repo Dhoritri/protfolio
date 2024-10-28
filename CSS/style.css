@@ -1,55 +1,282 @@
-/* Basic Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+  /* Navbar Styling */
 
-body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom right, #535353, #1a1a1a); 
-    color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh; 
-}
+  .navbar-brand img {
+    width: 100px;
+    height: auto;
+  }
 
-/* Navigation */
-nav {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background: transparent; 
-}
-.logo {
-    width: 150px; /* Increase the width for a larger logo */
-    height: auto; /* Maintain the aspect ratio */
-    margin-top: -10px; /* Adjust this value to reduce gap */
-}
+  /* Navbar Links Styling */
+  .navbar-nav .nav-link {
+    font-size: 15px;
+    margin: 0 12px;
+    color: #FFFAFB;
+    transition: color 0.3s ease-in-out;
+  }
 
+  .navbar-nav .nav-link:hover {
+    color: #7DE2D1;
+    font-weight: 600;
+  }
 
-.nav-menu {
-    list-style-type: none;
-    display: flex;
-}
+  /* Button Styling */
+  .btn-outline-danger {
+    border-radius: 30px;
+    padding: 10px 20px;
+    transition: background-color 0.3s, color 0.3s;
+    border-color: #7DE2D1;
+    color: #339989;
+  }
 
-.nav-menu li {
-    margin: 0 20px;
-    margin-top: -10px;
-}
+  .btn-outline-danger:hover {
+    background-color: #7DE2D1;
+    color: #131515;
+    border: none;
+  }
 
-.nav-menu a {
-    color: #fff;
+  /* Center Navbar Links */
+  .navbar-nav {
+    margin: 0 auto;
+  }
+
+  .hero {
+
+    padding: 100px 0;
+  }
+ 
+  .hero h1 {
+    font-weight: 700;
+    font-size: 3rem;
+    color: #FFFAFB;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+    color: #339989;
+  }
+  .description p{
+    margin-bottom: 50px;
+  
+  }
+
+  .hero-btn {
+    background-color: #FFFAFB ;
+    color: #131515;
+    padding: 12px 30px;
+    border-radius: 30px;
     text-decoration: none;
-    font-size: 16px;
-    transition: color 0.3s ease, font-size 0.3s ease;
+    transition: background-color 0.3s;
+  }
+
+  .hero-btn:hover {
+    background-color: #339989;
+    text-decoration: none;
+    color: #FFFAFB;
+  }
+
+  .hero img {
+    width: 600px;
+    height: auto;
+    padding-left: 100px;
+    gap: auto;
+
+
+  }
+
+  
+  .about-card {
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+    color: #FFFAFB;
+  }
+
+  
+  .about-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(131, 207, 182, 0.1);
+  }
+  
+  .icon img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+  }
+  
+  .read-more {
+    text-decoration: none;
+    transition: color 0.3s;
+    color: #339989;;
+  }
+  
+  .read-more:hover {
+    text-decoration: none;
+    color: #7DE2D1; /* Slightly lighter red on hover */
+  }
+  .why-choose-us {
+    background-color: #FFFAFB;
+  }
+  
+  .skill-card {
+    background-color: #f8f8f8;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .skill-card .icon img {
+    width: 40px;
+    height: 40px;
+  }
+  /* Section Styling */
+
+.current-project {
+  height: 60vh; /* Adjusted height for smaller size */
+  position: relative;
 }
 
-.nav-menu a:hover {
-    color: #999;
-    font-size: large;
-    
+/* Background Image Styling */
+.bg-image {
+  background: url('/freepik__fill-it-with-sprites-and-fields__33422.png') no-repeat center center/cover;
+  height: 100%; /* Ensure the background fills the section */
+}
+
+/* Content Card Styling */
+.content-card {
+  background-color: #FFFAFB;
+  max-width: 400px;
+}
+.btn-learn{
+  background-color: #339989;
+  padding: 15px;
+  color: #FFFAFB;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+.btn-learn:hover{
+  background-color: #7DE2D1;
+  padding: 15px;
+  border-radius: 4px;
+  color: #131515;
+  text-decoration: none;
+}
+/* Project Gallery Styling */
+.project-gallery {
+  gap: 20px;
+  padding: 10px 0;
+  scroll-snap-type: x mandatory;
+  overflow-x: auto;
+
+}
+.proto{
+  color: #339989;
+}
+.protof{
+  color: #FFFAFB;
+}
+/* Hide the scrollbar (optional) */
+.project-gallery::-webkit-scrollbar {
+  display: none;
+}
+
+/* Project Card Styling */
+.project-card {
+  position: relative;
+  width: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+  scroll-snap-align: start;
+}
+
+/* Image Styling */
+.project-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.project-card:hover img {
+  transform: scale(1.1);
+}
+
+/* Overlay Styling */
+.project-overlay {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: #FFFAFB;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7);
+}
+/* Section Background and Spacing */
+.stats-section {
+  background-color: #FFFAFB; /* Coral color matching your image */
+  color: #339989;
+}
+
+/* Stat Number Styling */
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* Stat Title Styling */
+.stat-title {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+.carous{
+  background-color: #FFFAFB;
+}
+.carousel img {
+  width: 70px;
+  max-height: 70px;
+  border-radius: 50%;
+  margin-right: 1rem;
+  overflow: hidden;
+}
+.carousel-inner {
+  padding: 1em;
+}
+
+@media screen and (min-width: 576px) {
+  .carousel-inner {
+    display: flex;
+    width: 90%;
+    margin-inline: auto;
+    padding: 1em 0;
+    overflow: hidden;
+  }
+  .carousel-item {
+    display: block;
+    margin-right: 0;
+    flex: 0 0 calc(100% / 2);
+  }
+}
+@media screen and (min-width: 768px) {
+  .carousel-item {
+    display: block;
+    margin-right: 0;
+    flex: 0 0 calc(100% / 3);
+  }
+}
+.carousel .card {
+  margin: 0 0.5em;
+  border: 0;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 3rem;
+  height: 3rem;
+  background-color: grey;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
 }
